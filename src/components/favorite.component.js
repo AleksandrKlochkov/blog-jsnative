@@ -40,8 +40,8 @@ async function linkClickHandler(event) {
     }
 }
 
-function renderList(list=[]){
-    if(list.length) {
+function renderList(list = []){
+    if(list && list.length) {
         return `
             <ul>
                 ${list.map(i =>  `<li><a href="#" data-postid="${i.id}" class="js-link">${i.title}</a></li>`).join(' ')}

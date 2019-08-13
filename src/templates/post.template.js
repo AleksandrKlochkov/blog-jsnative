@@ -7,8 +7,8 @@ export function renderPost(post, options) {
     const condidate = favorites.find(p => p.id === post.id)
 
     const button = condidate 
-    ? `<button class="button-danger button-round button-small" data-id="${post.id}" data-title="${post.title}">Удалить</button>` 
-    : `<button class="button-primary button-round button-small" data-id="${post.id}" data-title="${post.title}">Сохранить</button>`
+    ? `<button class="button-danger button-round button-small" data-id="${post.id}" data-title="${post.title}">Удалить из избранного</button>` 
+    : `<button class="button-primary button-round button-small" data-id="${post.id}" data-title="${post.title}">Сохранить в избранное</button>`
     
     return `
         <div class="panel">

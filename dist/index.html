@@ -16,7 +16,7 @@
 <header id="header">
   <h1 class="title">БЛОГ 001001</h1>
   <h2 class="subtitle">Создавайте статьи и добавляйте их в избранное</h2>
-  <button class="get-started button button-primary button-large">Приступить</button>
+  <button class="get-started button button-primary button-large js-header-start">Приступить</button>
 </header>
 
 <section class="container w-container">
@@ -56,24 +56,8 @@
       type="submit"
     >Создать</button>
   </form>
-  <div id="posts">
-    <div class="panel">
-      <div class="panel-head">
-        <p class="panel-title">Название поста</p>
-        <ul class="tags">
-          <li class="tag tag-blue tag-rounded">Новость</li>
-        </ul>
-      </div>
-      <div class="panel-body">
-        <p class="multi-line">Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="panel-footer w-panel-footer">
-        <small>12.12.12</small>
-      </div>
-    </div>
-  </div>
+  <div id="posts" class="hide"></div>
   <div id="favorite" class="hide"></div>
-
 </section>
 <script src="bundle.js"></script></body>
 </html>
