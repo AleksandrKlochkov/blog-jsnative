@@ -39,13 +39,13 @@ function buttonHandler(event) {
        const condidate = favorites.find(p => p.id === id)
        if(condidate){
             // удалить елемент
-            $el.textContent = 'Сохранить'
+            $el.textContent = 'Сохранить в избранное'
             $el.classList.add('button-primary')
             $el.classList.remove('button-danger')
             favorites = favorites.filter(p=> p.id !== id)
        }else{
            // добавить 
-           $el.textContent = 'Удалить'
+           $el.textContent = 'Удалить из избранного'
            $el.classList.remove('button-primary')
            $el.classList.add('button-danger')
            favorites.push({id, title})
