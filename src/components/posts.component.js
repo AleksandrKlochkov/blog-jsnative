@@ -39,9 +39,17 @@ async function buttonHandler(event) {
     if(id){
         let favorites = JSON.parse(localStorage.getItem('favorites')) || []
         if($el.classList.contains('button-remove')){
-            await apiService.fetchRemoveById(id)
-            favorites = favorites.filter(p=> p.id !== id)
-            this.$el.querySelector(`[data-postid="${id}"]`).remove()
+            const res = confirm('Вы уверены что хотите удалить пост')
+            if(res){
+                try{
+                    await apiService.fetchRemoveById(id)
+                    favorites = favorites.filter(p=> p.id !== id)
+                    this.$el.querySelector(`[data-postid="${id}"]`).remove()
+                    alert('Пост успешно удален')
+                }catch(e){
+                    console.log(e)
+                }
+            }
         }else{
             const condidate = favorites.find(p => p.id === id)
             if(condidate){
