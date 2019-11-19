@@ -25,7 +25,7 @@ export function renderPost(post, options) {
              <small>${post.date}</small>
              <div>
                 ${options.widthButton ? button : ''}
-                <button class="button-primary button-round button-small button-remove" data-id="${post.id}" data-title="${post.title}">Удалить пост</button>
+                ${options.widthButton ? `<button class="button-primary button-round button-small button-remove" data-id="${post.id}" data-title="${post.title}">Удалить пост</button>` : '' }
              </div>
             </div>
         </div>
