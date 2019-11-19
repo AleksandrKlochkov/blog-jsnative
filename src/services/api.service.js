@@ -40,6 +40,17 @@ class ApiService {
         }
     }
 
+    async fetchRemoveById(id){
+        try{
+            const request = new Request(`${this.url}/posts/${id}.json`, {
+                method: 'delete'
+            }) 
+            return useRequest(request)
+        }catch(error){
+            console.error(error)
+        }
+    }
+
 
 
 }

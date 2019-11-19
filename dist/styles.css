@@ -2,6 +2,15 @@
   display: none !important;
 }
 
+.button-remove {
+background-color: #ee609c;
+border: 1px solid #ee609c;
+}
+
+.button-remove:hover{
+  filter: brightness(120%);
+}
+
 input, select {
   -webkit-appearance: none;
   -moz-appearance: none;
